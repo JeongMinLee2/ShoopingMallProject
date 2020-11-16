@@ -24,6 +24,9 @@
 				<%=tagline%>
 			</h3>
 			<%
+			response.setIntHeader("Refresh", 5); //5초마다 페이지 갱신
+			%>
+			<%
 				Date day = new java.util.Date();
 				String am_pm;
 				int hour = day.getHours();
@@ -36,8 +39,11 @@
 					hour = hour - 12;
 				}
 				String CT = hour + ":" + minute + ":" + second + " " + am_pm;
-				out.println(" 현재 접속 시각: " + CT + "\n");
+				out.println(" 현재 접속 시각: " + CT +"&nbsp;&nbsp;(5초마다 시간갱신)" +"\n");
 			%>
+			
+			<p> <%=(new java.util.Date()) %>
+			
 		</div>
 		<hr>
 	</div>
