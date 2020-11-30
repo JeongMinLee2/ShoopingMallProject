@@ -7,6 +7,11 @@ import dto.Product;
 public class ProductRepository {
 
 	private ArrayList<Product> listOfProducts = new ArrayList<Product>();
+	private static ProductRepository instance = new ProductRepository();
+	
+	public static ProductRepository getInstance() {
+		return instance; // instance 메소드를 통해 동일한 메소드 사용 가능
+	}
 	
 	public ProductRepository() {
 		
@@ -52,5 +57,12 @@ public class ProductRepository {
 				}
 			}
 			return productById;
+		}
+		
+		//상품 정보를 등록하는 부분에 대한 메소드 추가했음
+		public void addProduct(Product product) {	//Product의 product객체를 받아와야함
+			listOfProducts.add(product);
+		
+		
 		}
 }

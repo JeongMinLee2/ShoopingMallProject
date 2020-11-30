@@ -1,7 +1,7 @@
 <%@ page contentType="text/html; charset=utf-8"%>
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="dto.Product" %>
-<jsp:useBean id="productDAO" class ="dao.ProductRepository" scope="session" />
+<%@ page import="dao.ProductRepository" %>
 
 <html>
 <head>
@@ -16,7 +16,8 @@
 		</div>
 	</div>
 	<%	//스트립틀릿태그
-		ArrayList<Product> listOfProducts = productDAO.getAllProducts(); //아까 입력한거 불러옴	
+		ProductRepository dao = ProductRepository.getInstance();
+		ArrayList<Product> listOfProducts = dao.getAllProducts(); //상품정보 입력한거 불러옴	
 	%>
 	
 	

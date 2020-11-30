@@ -86,7 +86,7 @@ public class Product implements Serializable {
 		return condition;
 	}
 
-	public void setCondition(String condition) {
+	public void setCondition(String condition) {  
 		this.condition = condition;
 	}
 
