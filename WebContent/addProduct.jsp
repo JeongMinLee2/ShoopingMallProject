@@ -1,7 +1,7 @@
 <%@ page contentType="text/html; charset=utf-8"%>
 <html>
 <head>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity= sha384-ggoyr0ixcbmqv3xipma34md+dh/1fq784/j6cy/ijtquohcwr7x9jvorxt2mzw1t crossorigin="anonymous">
+<link rel="stylesheet" href="./resources/css/bootstrap.min.css" integrity= sha384-ggoyr0ixcbmqv3xipma34md+dh/1fq784/j6cy/ijtquohcwr7x9jvorxt2mzw1t crossorigin="anonymous">
 
 <title>상품등록</title>
 </head>
@@ -13,7 +13,7 @@
 		</div>
 	</div>
 	<div class="container">
-		<form name="newProduct" action="./processAddProduct.jsp" class="form-horizeontal" method="post">
+		<form name="newProduct" action="./processAddProduct.jsp" class="form-horizeontal" method="post" enctype="multipart/form-data">
 			<div class="form-group row">
 				<label class="col-sm-2">상품 코드</label>
 				<div class="col-sm-3">
@@ -63,6 +63,11 @@
 					<input type="radio" name="condition" value="Old"> 중고 제품
 					<input type="radio" name="condition" value="Refublished"> 재생 제품
 				</div>			
+			</div>
+			<div class="form-group row">
+				<label class="col-sm-2">이미지</label>
+				<div class="col-sm-5">
+					<input type="file" name="productImage" class="form-control">
 			</div>
 			<div class="form-group row">
 				<div class="col-sm-offset-2 col-sm-10">

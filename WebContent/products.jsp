@@ -5,7 +5,7 @@
 
 <html>
 <head>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity= sha384-ggoyr0ixcbmqv3xipma34md+dh/1fq784/j6cy/ijtquohcwr7x9jvorxt2mzw1t crossorigin="anonymous">
+<link rel="stylesheet" href="./resources/css/bootstrap.min.css" integrity= sha384-ggoyr0ixcbmqv3xipma34md+dh/1fq784/j6cy/ijtquohcwr7x9jvorxt2mzw1t crossorigin="anonymous">
 <title>상품 목록</title>
 </head>
 <body>
@@ -19,8 +19,7 @@
 		ProductRepository dao = ProductRepository.getInstance();
 		ArrayList<Product> listOfProducts = dao.getAllProducts(); //상품정보 입력한거 불러옴	
 	%>
-	
-	
+		
 	<div class="container">
 		<div class="row" align="center">
 			<%
@@ -28,6 +27,7 @@
 					Product product = listOfProducts.get(i);
 			%>
 				<div class="col-md-4">
+					<img src="./resources/images/<%=product.getFilename()%>" style="width: 100%"></img>
 					<h3><%=product.getPname() %></h3>
 					<p><%=product.getDescription() %>
 					<p><%=product.getUnitPrice() %>

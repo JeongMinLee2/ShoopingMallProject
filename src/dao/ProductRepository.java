@@ -21,6 +21,7 @@ public class ProductRepository {
 		phone.setManufacturer("Apple");
 		phone.setUnitsInStock(1000);
 		phone.setCondition("New");
+		phone.setFilename("p123.png");
 		
 		Product laptop = new Product("p1234", "MacBook Pro 13형", 1690000);
 		laptop.setDescription("13.3인치, 2560 x 1600 기본 해상도(227ppi),Apple M1 칩");
@@ -28,6 +29,7 @@ public class ProductRepository {
 		laptop.setManufacturer("Apple");
 		laptop.setUnitsInStock(600);
 		laptop.setCondition("Secondhand");
+		laptop.setFilename("p1234.png");
 		
 		Product watch = new Product("p12345", "Apple Watch", 360000);
 		watch.setDescription("44mm 또는 40mm 케이스 크기, Retina 디스플레이, S5 듀얼 코어 SiP");
@@ -35,6 +37,7 @@ public class ProductRepository {
 		watch.setManufacturer("Apple");
 		watch.setUnitsInStock(800);
 		watch.setCondition("refurbished");
+		watch.setFilename("p12345.png");
 		
 		listOfProducts.add(phone);
 		listOfProducts.add(laptop);

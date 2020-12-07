@@ -3,7 +3,7 @@
 <%@ page import="dao.ProductRepository" %>
 <html>
 <head>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity= sha384-ggoyr0ixcbmqv3xipma34md+dh/1fq784/j6cy/ijtquohcwr7x9jvorxt2mzw1t crossorigin="anonymous">
+<link rel="stylesheet" href="./resources/css/bootstrap.min.css" integrity= sha384-ggoyr0ixcbmqv3xipma34md+dh/1fq784/j6cy/ijtquohcwr7x9jvorxt2mzw1t crossorigin="anonymous">
 <title>상품 상세 정보</title>
 </head>
 <body>
@@ -22,6 +22,9 @@
 	<!-- 18줄의 product정보 출력 -->
 	<div class="container">
 		<div class="row">
+			<div class="col-md-5">
+				<img src="./resources/images/<%=product.getFilename()%>" style="width:100%"></img>
+			</div>
 			<div class="col-md-6">
 				<h3><%=product.getPname() %></h3>
 				<p><%=product.getDescription() %>
